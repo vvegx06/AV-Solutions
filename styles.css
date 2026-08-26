@@ -273,22 +273,49 @@ footer{
 @media (max-width: 860px){
   .layout{ grid-template-columns: 1fr; margin: 0; border:none; }
   .sidebar{
-    position: sticky; top:0; height:auto;
-    flex-direction:row; justify-content:space-between; align-items:center;
-    padding: 14px 18px; z-index: 10;
-    overflow-x:auto;
-    order: 1;
-    border-left: none;
-    border-bottom: 1px solid var(--line);
+    display:none;
   }
-  main{ order: 2; }
-  .avatar-frame{ width:52px; height:52px; flex-shrink:0; }
-  nav.nav{ flex-direction:row; gap:16px; }
-  .nav-link{ font-size: 8px; white-space:nowrap; }
+  main{ order: 1; }
   section{ padding: 46px 24px; }
+  h1.name{ font-size: 24px; }
+  h2.section-title{ font-size: 18px; }
+  p{ font-size: 14px; }
+  .tagline{ font-size: 10px; }
+  .grid-cards{ grid-template-columns: 1fr; }
+  .card-thumb{ height: 160px; }
+  .socials{ flex-wrap: wrap; }
+  .pill-row{ gap: 8px; }
+  .pill{ font-size: 11px; padding: 6px 10px; }
+  .timeline-item h3{ font-size: 14px; }
+  .eyebrow{ font-size: 8px; }
+}
+
+@media (max-width: 480px){
+  .sidebar{
+    padding: 8px 14px;
+  }
+  .avatar-frame{ width:40px; height:40px; }
+  section{ padding: 30px 16px; min-height: auto; }
+  h1.name{ font-size: 20px; }
+  h2.section-title{ font-size: 16px; }
+  .pixel-btn{ font-size: 8px; padding: 6px 10px; }
+  .social-btn{ width: 34px; height: 34px; }
+  .card-body{ padding: 14px; }
+  .card-body h3{ font-size: 14px; }
+  .card-body p{ font-size: 12px; }
+  .tag{ font-size: 8px; padding: 4px 5px; }
+  .card-go{ font-size: 8px; }
+  .skills-block{ margin-bottom: 20px; }
+  .timeline-item h3{ font-size: 13px; }
+  .timeline-meta{ font-size: 11px; }
+  .eyebrow{ font-size: 7px; }
 }
 
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   .name .cursor{ animation:none; }
+}
+
+@media (max-width: 860px){
+  #hero{ flex-direction: column; gap: 20px; }
 }
